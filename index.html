@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Equipment Availability</title>
+    
+    <!-- Link to our CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-- Logo/Brand -->
+            <div class="nav-logo">
+                <span class="logo-icon">🔬</span>
+                <span class="logo-text">Lab Portal</span>
+            </div>
+            
+            <!-- Search Bar -->
+            <div class="nav-search">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    class="search-input" 
+                    placeholder="Search equipment, lab, or condition..."
+                >
+                <button class="search-button">
+                    <span class="search-icon">🔍</span>
+                </button>
+            </div>
+            
+            <!-- Navigation Links (optional - can add later) -->
+            <div class="nav-links">
+                <a href="#" class="nav-link active">Equipment</a>
+                <a href="#" class="nav-link">Labs</a>
+                <a href="#" class="nav-link">Help</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Main container for the page -->
+    <div class="container">
+        
+        <!-- Page header -->
+        <header>
+            <h1>Lab Equipment Availability</h1>
+            <p>View current equipment status and availability</p>
+        </header>
+
+        <!-- Loading message (will be controlled by JavaScript later) -->
+        <div id="loading" style="display: none;">Loading equipment data...</div>
+
+        <!-- Error message (will be controlled by JavaScript later) -->
+        <div id="error" style="display: none;"></div>
+
+        <!-- Table container (Excel-like table) -->
+        <div class="table-container">
+            <table id="equipmentTable">
+                <!-- Table header -->
+                <thead>
+                    <tr>
+                        <th>Equipment Name</th>
+                        <th>Lab</th>
+                        <th>Available Quantity</th>
+                    
+                        <th>Last Updated</th>
+                    </tr>
+                </thead>
+                <!-- Table body with SAMPLE DATA for design preview -->
+                <tbody id="equipmentTableBody">
+                    <tr>
+                        <td>Microscope - Compound</td>
+                        <td>Biology Lab A</td>
+                        <td style="text-align: center;">12</td>
+                        
+                        <td>2024-01-28</td>
+                    </tr>
+                    <tr>
+                        <td>Oscilloscope</td>
+                        <td>Physics Lab B</td>
+                        <td style="text-align: center;">5</td>
+                        
+                        <td>2024-01-27</td>
+                    </tr>
+                    <tr>
+                        <td>Bunsen Burner</td>
+                        <td>Chemistry Lab</td>
+                        <td style="text-align: center;">20</td>
+                       
+                        <td>2024-01-29</td>
+                    </tr>
+                    <tr>
+                        <td>Centrifuge</td>
+                        <td>Biology Lab A</td>
+                        <td style="text-align: center;">3</td>
+                        
+                        <td>2024-01-25</td>
+                    </tr>
+                    <tr>
+                        <td>Digital Multimeter</td>
+                        <td>Electronics Lab</td>
+                        <td style="text-align: center;">15</td>
+                       
+                        <td>2024-01-30</td>
+                    </tr>
+                    <tr>
+                        <td>Hot Plate</td>
+                        <td>Chemistry Lab</td>
+                        <td style="text-align: center;">8</td>
+                        
+                        <td>2024-01-26</td>
+                    </tr>
+                    <tr>
+                        <td>pH Meter</td>
+                        <td>Chemistry Lab</td>
+                        <td style="text-align: center;">6</td>
+                        
+                        <td>2024-01-29</td>
+                    </tr>
+                    <tr>
+                        <td>Spectrophotometer</td>
+                        <td>Biology Lab B</td>
+                        <td style="text-align: center;">2</td>
+                        
+                        <td>2024-01-28</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>Last refreshed: <span id="refreshTime">Jan 30, 2024 - 3:45 PM</span></p>
+        </footer>
+
+    </div>
+
+    <!-- 
+        ============================================
+        FIREBASE JAVASCRIPT PLACEHOLDER
+        ============================================
+        
+        When ready to integrate Firebase:
+        1. Uncomment the line below
+        2. Make sure script.js has your Firebase config
+        3. The script will replace the sample data above
+        
+        <script src="script.js" type="module"></script>
+    -->
+</body>
+</html>
