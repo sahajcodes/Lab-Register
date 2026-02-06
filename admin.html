@@ -1,0 +1,66 @@
+<!doctype html>
+ <html lang="en">
+     <head> <meta charset="utf-8" /> 
+     <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+     <title>Lab register - ASD  </title> 
+
+     <link rel="stylesheet" href="css/admin.css" />
+        </head> 
+
+    <body>
+
+<section class="panel" aria-labelledby="issues-heading">
+  <div class="panel-header">
+    <h3 id="issues-heading">All Reported Issues</h3>
+    <p style="margin:0;color:var(--muted);font-size:13px">Manage status and monitor incoming reports</p>
+  </div>
+
+  <div class="admin-table-wrapper" role="region" aria-label="Reported issues table">
+    <table class="admin-table" aria-describedby="issues-heading">
+      <thead>
+        <tr>
+          <th scope="col">Issue Title</th>
+          <th scope="col">Category</th>
+          <th scope="col">Location</th>
+          <th scope="col">Reported By</th>
+          <th scope="col">Status</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody id="issuesTableBody"></tbody>
+    </table>
+  </div>
+</section>
+
+<section class="panel map-panel" aria-labelledby="map-heading">
+  <div class="panel-header" style="margin-bottom:12px">
+    <h3 id="map-heading">Campus Issues Map</h3>
+    <p style="margin:0;color:var(--muted);font-size:13px">Visualize reported issues across campus</p>
+  </div>
+
+  <div class="heatmap-filters">
+    <div class="filter-group">
+      <label for="categoryFilter">Category:</label>
+      <select id="categoryFilter" class="filter-select">
+        <option value="">All Categories</option>
+        <option value="Water">Water</option>
+        <option value="Electricity">Electricity</option>
+        <option value="Hygiene">Hygiene</option>
+        <option value="Miscellaneous">Miscellaneous</option>
+      </select>
+    </div>
+
+    <div class="filter-group">
+      <label for="statusFilter">Status:</label>
+      <select id="statusFilter" class="filter-select">
+        <option value="">All Statuses</option>
+        <option value="open">Open</option>
+        <option value="in_progress">In Progress</option>
+        <option value="resolved">Resolved</option>
+      </select>
+    </div>
+   
+  </div>
+</section>
+</main>
+</html>
