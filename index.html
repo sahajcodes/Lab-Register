@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digital Stock Register - College Laboratory Management</title>
+    <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
     
@@ -35,28 +37,34 @@
         </section>
 
         <!-- Controls Section: Lab selection and search functionality -->
-        <section>
-            <h3>Select Laboratory and Search Items</h3>
-            
-            <!-- Laboratory selection dropdown -->
-            <div>
-                <label for="lab-select">Select Laboratory:</label>
-                <select id="lab-select" name="laboratory">
-                    <option value="">-- Choose a Lab --</option>
-                    <option value="english">English Lab</option>
-                    <option value="pps">PPS Lab</option>
-                    <option value="chemistry">Chemistry Lab</option>
-                    <option value="physics">Physics Lab</option>
-                    <option value="workshop">Workshop</option>
-                </select>
-            </div>
+        <!-- Controls Section -->
+<section class="controls-section">
+    <h3>Select Laboratory and Search Items</h3>
 
-            <!-- Search input field -->
-            <div>
-                <label for="search-item">Search Item:</label>
-                <input type="text" id="search-item" name="search" placeholder="Enter item name...">
-            </div>
-        </section>
+    <div class="controls-row">
+
+        <div class="control-group">
+            <label for="search-item">Search Item:</label>
+            <input type="text" id="search-item" placeholder="Enter item name...">
+        </div>
+
+        <div class="control-group">
+            <label for="labFilter">Choose Lab:</label>
+            <select id="labFilter">
+                <option value="All">All Labs</option>
+                <option value="English Lab">English Lab</option>
+                <option value="PPS Lab">PPS Lab</option>
+                <option value="Chemistry Lab">Chemistry Lab</option>
+                <option value="Physics Lab">Physics Lab</option>
+                <option value="Workshop">Workshop</option>
+            </select>
+        </div>
+
+    </div>
+</section>
+
+
+                
 
         <!-- Stock Table Section: Displays inventory items -->
         <section>
@@ -65,56 +73,25 @@
             <!-- Data table for stock items -->
             <table border="1">
                 <thead>
-                    <tr>
-                        <th>Item Name</th>
-                        <th>Quantity</th>
-                        <th>Issue Date</th>
-                        <th>Return Date</th>
-                        <th>Remarks</th>
-                        <th>Actions</th>
-                    </tr>
+                    <thead>
+                         <tr>
+                            <th>Lab</th>
+                             <th>Item Name</th>
+                             <th>Quantity</th>
+                              <th>Remarks</th>
+                              
+                         </tr>
+                        </thead>
+
                 </thead>
                 <tbody>
-                    <!-- Sample row 1: Example data for demonstration -->
-                    <tr>
-                        <td>Microscope</td>
-                        <td>15</td>
-                        <td>2024-01-15</td>
-                        <td>2024-01-20</td>
-                        <td>Working condition</td>
-                        <td>
-                            <button type="button">Add</button>
-                            <button type="button">Edit</button>
-                            <button type="button">Delete</button>
-                        </td>
-                    </tr>
-                    
-                    <!-- Sample row 2: Example data for demonstration -->
-                    <tr>
-                        <td>Beaker Set</td>
-                        <td>25</td>
-                        <td>2024-01-10</td>
-                        <td>2024-01-25</td>
-                        <td>Complete set available</td>
-                        <td>
-                            <button type="button">Add</button>
-                            <button type="button">Edit</button>
-                            <button type="button">Delete</button>
-                        </td>
-                    </tr>
                     
                     <!-- Sample row 3: Example data for demonstration -->
                     <tr>
+                        <td>PPS Lab</td>
                         <td>Computer System</td>
                         <td>30</td>
-                        <td>2024-02-01</td>
-                        <td>-</td>
-                        <td>Permanently installed</td>
-                        <td>
-                            <button type="button">Add</button>
-                            <button type="button">Edit</button>
-                            <button type="button">Delete</button>
-                        </td>
+                        <td>Operational</td>
                     </tr>
                     
                     <!-- Additional rows can be added here as needed -->
@@ -132,6 +109,7 @@
         <p>&copy; 2024 College Laboratory Management System. All rights reserved.</p>
         <p>Contact: lab-admin@college.edu | Phone: +91-XXXXXXXXXX</p>
     </footer>
+<script src="script.js"></script>
 
 </body>
 </html>
