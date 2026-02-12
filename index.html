@@ -72,7 +72,6 @@
             
             <!-- Data table for stock items -->
             <table border="1">
-                <thead>
                     <thead>
                          <tr>
                             <th>Lab</th>
@@ -86,13 +85,7 @@
                 </thead>
                 <tbody>
                     
-                    <!-- Sample row 3: Example data for demonstration -->
-                    <tr>
-                        <td>PPS Lab</td>
-                        <td>Computer System</td>
-                        <td>30</td>
-                        <td>Operational</td>
-                    </tr>
+                    
                     
                     <!-- Additional rows can be added here as needed -->
                     <tr>
@@ -103,13 +96,35 @@
         </section>
 
     </main>
+<!-- Admin Login Modal -->
+<div id="loginModal" class="modal" style="display:none;">
+  <div class="modal-content">
+    <h3>Admin Login</h3>
+
+    <input type="email" id="adminEmail" placeholder="Enter Email">
+    <input type="password" id="adminPassword" placeholder="Enter Password">
+
+    <button id="loginBtn">Login</button>
+    <button id="closeLogin">Cancel</button>
+  </div>
+</div>
 
     <!-- Footer Section: Additional information and credits -->
     <footer>
         <p>&copy; 2024 College Laboratory Management System. All rights reserved.</p>
         <p>Contact: lab-admin@college.edu | Phone: +91-XXXXXXXXXX</p>
     </footer>
+<script type="module" src="firebase.js"></script>
 <script src="script.js"></script>
+<!-- Success Popup -->
+<div id="successPopup" class="success-popup">
+  <div class="success-box">
+    <div class="checkmark">✔</div>
+    <h3>Login Successful</h3>
+    <p>Welcome Admin 👩‍💻</p>
+  </div>
+</div>
+
 
 </body>
 </html>
