@@ -243,9 +243,12 @@ label[for="labFilter"] {
     margin-right: 10px;
 }
 /* Search highlight */
-.highlight-row {
-    background-color: #fef08a !important; /* soft yellow */
+.highlight-row td {
+    background-color: #fde047 !important;
+    box-shadow: inset 0 0 0 2px #facc15;
 }
+
+
 
 /* ==========================
    STOCK TABLE SECTION
@@ -416,4 +419,67 @@ footer p:first-child {
     thead th {
         padding: 8px;
     }
+}
+/* Login Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  width: 300px;
+  text-align: center;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.modal-content button {
+  margin: 5px;
+  padding: 8px 15px;
+}
+.success-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.success-box {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 15px;
+  text-align: center;
+  animation: pop 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.checkmark {
+  font-size: 40px;
+  color: #2ecc71;
+  margin-bottom: 10px;
+}
+
+@keyframes pop {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
 }
